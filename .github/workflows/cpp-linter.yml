@@ -1,0 +1,48 @@
+name: Batch CPP Audit & Binary Management
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup Environment
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y g++
+        mkdir -p bin
+
+    - name: Batch Compile & Organize
+      run: |
+        echo "Build Report ->" > audit_report.txt
+        for file in *.cpp; do
+          filename="${file%.*}"
+          echo "Compiling $file..."
+          g++ -std=c++17 "$file" -o "bin/$filename" 2>> audit_report.txt || echo "$file failed to build" >> audit_report.txt
+        done
+
+    - name: Execute Binaries & Capture Runtime Errors
+      run: |
+        echo -e "\n--- Runtime Traceback ---" >> audit_report.txt
+        for cmd in bin/*; do
+          if [ -x "$cmd" ]; then
+            echo "Running $cmd..."
+            "./$cmd" 2>> audit_report.txt || true
+          fi
+        done
+
+    - name: Upload Audit Results
+      uses: actions/upload-artifact@v4
+      with:
+        name: audit-artifacts
+        path: |
+          bin/
+          traceback.txt
