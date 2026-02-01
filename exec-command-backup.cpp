@@ -43,38 +43,53 @@ std::string exec(const char* cmd) {
     return result;
 }
 
+// 1.`[]` means error type.
+//   e.g. [error] [warning] [hint] [info]
+// 2.`()` means error code and files.
+//   e.g. (0x000000, ./path/to/libxxxxxx.so)
+// 3.`\nTraceback:` means debug message.
+//   e.g.   Traceback file/directory:
+//       - `./path/to/libxxxxxx.so:197`
+//       - `./path/to/file:2093`
+//       - `./path/to/directory/`
+// Demo: [error] (0x000000, ./path/to/libxxxxx.so)
+//          Traceback:
+//       - `./path/to/libxxxx.so:197`
+//       - `./path/to/file:2093`
+//       - `./path/to/directory/`
+
 void renderLineContent(const std::string& line) {
     for (size_t i = 0; i < line.length(); ++i) {
         if (line.substr(i, 7) == "command") {
             for(int j=0; j<7; ++j) std::cout << colorify(line[i+j], 280);
             i += 6;
         } 
-        else if (line[i] == 'a') std::cout << colorify('a', 91);
-        else if (line[i] == 'b') std::cout << colorify('b', 120);
-        else if (line[i] == 'c') std::cout << colorify('c', 71);
-        else if (line[i] == 'd') std::cout << colorify('d', 130);
-        else if (line[i] == 'e') std::cout << colorify('e', 140);
-        else if (line[i] == 'f') std::cout << colorify('f', 150);
-        else if (line[i] == 'g') std::cout << colorify('g', 160);
-        else if (line[i] == 'h') std::cout << colorify('h', 170);
-        else if (line[i] == 'i') std::cout << colorify('i', 180);
-        else if (line[i] == 'j') std::cout << colorify('j', 190);
-        else if (line[i] == 'k') std::cout << colorify('k', 200);
-        else if (line[i] == 'l') std::cout << colorify('l', 210);
-        else if (line[i] == 'm') std::cout << colorify('m', 199);
-        else if (line[i] == 'n') std::cout << colorify('n', 319);
-        else if (line[i] == 'o') std::cout << colorify('o', 419);
-        else if (line[i] == 'p') std::cout << colorify('p', 220);
-        else if (line[i] == 'q') std::cout << colorify('q', 230);
-        else if (line[i] == 'r') std::cout << colorify('r', 240);
-        else if (line[i] == 's') std::cout << colorify('s', 250);
-        else if (line[i] == 't') std::cout << colorify('t', 260);
-        else if (line[i] == 'u') std::cout << colorify('u', 261);
-        else if (line[i] == 'v') std::cout << colorify('v', 231);
-        else if (line[i] == 'w') std::cout << colorify('w', 281);
-        else if (line[i] == 'x') std::cout << colorify('x', 291);
-        else if (line[i] == 'y') std::cout << colorify('y', 141);
-        else if (line[i] == 'z') std::cout << colorify('z', 175);
+        // else if (line[i] == 'a') std::cout << colorify('a', 91);
+        // else if (line[i] == 'b') std::cout << colorify('b', 120);
+        // else if (line[i] == 'c') std::cout << colorify('c', 71);
+        // else if (line[i] == 'd') std::cout << colorify('d', 130);
+        // else if (line[i] == 'e') std::cout << colorify('e', 140);
+        // else if (line[i] == 'f') std::cout << colorify('f', 150);
+        // else if (line[i] == 'g') std::cout << colorify('g', 160);
+        // else if (line[i] == 'h') std::cout << colorify('h', 170);
+        // else if (line[i] == 'i') std::cout << colorify('i', 180);
+        // else if (line[i] == 'j') std::cout << colorify('j', 190);
+        // else if (line[i] == 'k') std::cout << colorify('k', 200);
+        // else if (line[i] == 'l') std::cout << colorify('l', 210);
+        // else if (line[i] == 'm') std::cout << colorify('m', 199);
+        // else if (line[i] == 'n') std::cout << colorify('n', 319);
+        // else if (line[i] == 'o') std::cout << colorify('o', 419);
+        // else if (line[i] == 'p') std::cout << colorify('p', 220);
+        // else if (line[i] == 'q') std::cout << colorify('q', 230);
+        // else if (line[i] == 'r') std::cout << colorify('r', 240);
+        // else if (line[i] == 's') std::cout << colorify('s', 250);
+        // else if (line[i] == 't') std::cout << colorify('t', 260);
+        // else if (line[i] == 'u') std::cout << colorify('u', 261);
+        // else if (line[i] == 'v') std::cout << colorify('v', 231);
+        // else if (line[i] == 'w') std::cout << colorify('w', 281);
+        // else if (line[i] == 'x') std::cout << colorify('x', 291);
+        // else if (line[i] == 'y') std::cout << colorify('y', 141);
+        // else if (line[i] == 'z') std::cout << colorify('z', 175);
         else std::cout << line[i];
     }
 }
