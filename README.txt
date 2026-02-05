@@ -21,6 +21,8 @@ Change: 2026-02-01 13:22:40.380925998 +0800
  Birth: 2026-02-01 13:22:40.380925998 +0800
         ^^^^^^^^^^ ^^^^^^^^
 	This corresponds to the date and specific time of this document.
+Protips: You can use `find ./cplusplus -type f -exec sh -c 'echo "---"; stat {} | sed -n "1p;\$p"' \;`
+To display only the first and last lines of the output.
 
 File Tree
 . (Root Directory)
