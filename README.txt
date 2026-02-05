@@ -1,7 +1,26 @@
 zhangweize9-cyber/personal-toolbox-nocomment
 ------------------------------------------------------------------------
 
-Since you've come to this repository, congratulations on opening the door to a new world! This mainly stores some of my thought processes; the update frequency is irregular—sometimes ten times a day, sometimes not even once a year. This `README.txt` is simply to explain what this repository is for. Below is a directory structure; the text files corresponding to the programming languages ​​in each directory are experimental code I've written, and will be named chronologically later. For example: `2026-02-05-17-45.txt`
+Introduction
+Since you've come to this repository, congratulations on opening the door to a new world! This mainly stores some of my thought processes; the update frequency is irregular—sometimes ten times a day, sometimes not even once a year. 
+This `README.txt` is simply to explain what this repository is for. Below is a directory structure; the text files corresponding to the programming languages in each directory are experimental code I've written, and will be named chronologically later. 
+For example: `20260205-174523.txt`
+2026 02    05   -            17   45     23     .txt
+^^^^ ^^    ^^   ^            ^^   ^^     ^^     ^^^^
+Year Month Date Segmentation Hour Minute Second File Extension
+
+How To Check File Time
+$ stat ../../LICENSE
+  File: ../../LICENSE
+  Size: 1079      	Blocks: 8          IO Block: 4096   regular file
+Device: 8,48	Inode: 355800      Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/the-essence-of-life)   Gid: ( 1000/the-essence-of-life)
+Access: 2026-02-01 13:22:40.408926016 +0800
+Modify: 2026-02-01 13:22:40.380925998 +0800
+Change: 2026-02-01 13:22:40.380925998 +0800
+ Birth: 2026-02-01 13:22:40.380925998 +0800
+        ^^^^^^^^^^ ^^^^^^^^
+	This corresponds to the date and specific time of this document.
 
 File Tree
 . (Root Directory)
