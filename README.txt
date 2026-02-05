@@ -1,10 +1,9 @@
 zhangweize9-cyber/personal-toolbox-nocomment
-------------------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 Since you've come to this repository, congratulations on opening the door to a new world! This mainly stores some of my thought processes; the update frequency is irregular—sometimes ten times a day, sometimes not even once a year. This `README.txt` is simply to explain what this repository is for. Below is a directory structure; the text files corresponding to the programming languages ​​in each directory are experimental code I've written, and will be named chronologically later. For example: `2026-02-05-17-45.txt`
 
 File Tree
-===================
 . (Root Directory)
 ├── factory/ -> This area is mainly used to store test cases.
 │   ├── bin/ -> This section primarily stores compiled binary files. 
@@ -14,18 +13,18 @@ File Tree
 │   ├── lua/ -> Lua scripting language.
 │   └── python/ -> Python machine learning.
 ├── LICENSE -> This project follows the MIT license.
-├── planning -> No prior programming language planned for learning.
-│   ├── csharp -> CSharp for building cross-platform applications.
-│   ├── go -> Go is used to develop network services.
-│   ├── rust -> Rust is used for embedded development.
-│   └── zig -> Zig is an emerging system-level programming language.
+├── planning/ -> No prior programming language planned for learning.
+│   ├── csharp/ -> CSharp for building cross-platform applications.
+│   ├── go/ -> Go is used to develop network services.
+│   ├── rust/ -> Rust is used for embedded development.
+│   └── zig/ -> Zig is an emerging system-level programming language.
 ├── README.txt -> Project Description.
-└── secondary -> It has a basic understanding, but not enough to be used flexibly.
-    ├── bash -> Bash is used for scripting and automation.
-    ├── clang -> A high-performance, lightweight compiler front-end based on LLVM.
-    ├── java -> Java is a highly portable programming language.
-    ├── kotlin -> Kotlin can be used for cross-platform development.
-    └── objectivec -> Objective-C is a general-purpose, object-oriented programming language.
+└── secondary/ -> It has a basic understanding, but not enough to be used flexibly.
+    ├── bash/ -> Bash is used for scripting and automation.
+    ├── clang/ -> A high-performance, lightweight compiler front-end based on LLVM.
+    ├── java/ -> Java is a highly portable programming language.
+    ├── kotlin/ -> Kotlin can be used for cross-platform development.
+    └── objectivec/ -> Objective-C is a general-purpose, object-oriented programming language.
 ===================
 
 * IMPORTANT (./important/)
