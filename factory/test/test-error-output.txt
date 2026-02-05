@@ -1,0 +1,23 @@
+[error] (0x000000, ./path/to/libxxxxx.so)
+Traceback:
+- `./path/to/libxxxx.so:197`
+- `./path/to/file:2093`
+- `./path/to/directory/`
+
+[warning] (0x000000, ./path/to/libxxxxx.so)
+Traceback:
+- `./path/to/libxxxx.so:197`
+- `./path/to/file:2093`
+- `./path/to/directory/`
+
+[hint] (0x000000, ./path/to/libxxxxx.so)
+Traceback:
+- `./path/to/libxxxx.so:197`
+- `./path/to/file:2093`
+- `./path/to/directory/`
+
+[info] (0x000000, ./path/to/libxxxxx.so)
+Traceback:
+- `./path/to/libxxxx.so:197`
+- `./path/to/file:2093`
+- `./path/to/directory/`
